@@ -1,0 +1,102 @@
+/* Reset margin and padding for body and html, ensure full width and height */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Ensure the body takes up at least the full viewport height */
+body {
+    min-height: 100vh;
+}
+
+/* Styles for the navigation bar */
+nav {
+    position: fixed; /* Fixed position to keep the nav bar at the top */
+    display: flex;
+    height: 10%; /* Height of the navigation bar */
+    width: 100%; /* Full width of the viewport */
+    align-content: center; /* Align content vertically */
+    background: #f76b8a;
+}
+
+/* Styles for the navigation title */
+nav h1 {
+    font-family: 'Luckiest Guy', cursive;
+    letter-spacing: 3px; /* Adjust the value as needed */
+    margin-top: 10px; /* Top margin */
+    padding-left: 100px; /* Left padding */
+    font-size: 30px; /* Font size */
+    color: rgb(255, 255, 255); /* Font color */
+    text-shadow: 0px 0px 5px rgb(31, 31, 31); /* Text shadow effect */
+    font-style: italic; /* Italic font style */
+}
+
+/* Styles for the unordered list in the navigation */
+nav ul {
+    list-style-type: none; /* Remove default list styling */
+    padding-left: 340px; /* Left padding for alignment */
+}
+
+/* Styles for each list item in the navigation */
+nav ul li {
+    display: inline; /* Display list items inline */
+    margin-right: 40px; /* Space between items */
+    font-size: 21px; /* Font size */
+    color: rgb(255, 255, 255); /* Font color */
+    font-size: 23px; /* Adjusted font size */
+}
+
+/* Styles for sections */
+section {
+    padding: 100px 20px; /* Padding for top/bottom and left/right */
+    height: 600px; /* Height of each section */
+}
+
+/* Styles for the menu icon */
+.bx-menu {
+    color: rgb(255, 255, 255); /* Font color */
+    font-size: 31px; /* Icon font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    position: absolute; /* Absolute position for precise placement */
+    right: 35px; /* Distance from the right edge */
+    margin-top: 15px; /* Margin from the top */
+}
+
+/* Responsive styles for screens narrower than 1100px */
+@media (max-width: 1100px) {
+    nav ul {
+        display: none; /* Hide the menu by default on smaller screens */
+        height: 530px; /* Adjusted height */
+        width: 1px; /* Narrow width for positioning */
+        flex-direction: column; /* Stack menu items vertically */
+        background-color: #f76b8a;        
+        position: absolute; /* Absolute position */
+        top: 44px; /* Position from the top */
+        right: 0; /* Align to the right edge */
+        justify-content: center; /* Center items vertically */
+        align-items: center; /* Center items horizontally */
+        left: auto; /* Adjust to automatic positioning */
+    }
+
+    /* Display the menu when the 'active' class is added */
+    nav ul.active {
+        display: flex;
+    }
+    /* Styles for list items in the responsive menu */
+    nav ul li {
+        margin: 25px 0; /* Space between items vertically */
+        color: rgb(255, 255, 255); /* Font color */
+        margin-right: 320px; /* Margin to the right for alignment */
+    }
+}
+
+/* Styles for screens wider than 1100px */
+@media screen and (min-width: 1100px) {
+    /* Hide the menu icon on larger screens */
+
+    nav .bx-menu {
+        display: none;
+    }
+}
